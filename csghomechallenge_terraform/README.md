@@ -1,4 +1,4 @@
-*******************AWS**************************************
+*******************----------AWS-----------**************************************
 
 This repository is an introductory example to Infrastructure as Code (IAC) with AWS, Terraform to accomplish the homechallenege task.
 
@@ -13,7 +13,6 @@ AmazonEC2FullAccess
 IAMFullAccess
 VPC with NAT gateway
 
-[default]
 aws_access_key_id=xxxxx
 aws_secret_access_key=xxxxx
 homechallenge Keypair
