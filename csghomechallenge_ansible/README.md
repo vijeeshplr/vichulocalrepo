@@ -14,7 +14,7 @@ Handle sensitive data, such as the token, in a secure manner
 created secrets.yml ,edited secrets.yml by adding "stoken" varibel with given value  
 Encrypted the token with ansible-vault.  
 During run time call the playbook with vault password  
-ansible-playbook myplaybook.yaml --vault-password-file=/home/ubuntu/ansible/vaultpassword.txt  
+ansible-playbook csghomechallenge_playbook.yaml --vault-password-file=/home/ubuntu/ansible/vaultpassword.txt  
 
 Ensure that the Ansible playbook can be reused against multiple systems
 ----------------------------------------------------------------------
