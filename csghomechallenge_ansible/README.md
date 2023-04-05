@@ -1,3 +1,5 @@
+Steps
+-----
 installed ansible on ansiblecontrolnode01 and validated the configuration  
 created a folder called "ansible" and ansible.cfg file by creating inventory file name inventory.  
 Added the private ip of remote servers homechallengedev01,homechallengedev01 to inventory.  
