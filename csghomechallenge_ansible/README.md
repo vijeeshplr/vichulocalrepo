@@ -5,5 +5,6 @@
 # created two bash file in ansiblecontrolnodedev01 security_agent_installer_linux_amd64_v1.0.0.sh and security_agent_config.yaml by        
   copying the given code.
 # Created playbook file hcplaybook.yaml to copy these file to remote server and execute it.
-# run the play book ansible-playbook -i inventory hcplaybook.yaml
+# run the play book ansible-playbook -i inventory hcplaybook.yaml if needed execute it by passing parameter ansible-playbook -i inventory hcpplaybook_test.yaml --extra-vars "stoken='token'"
 # check the output.txt file and validate the script executed successfully.
+# bash script works with any token value.

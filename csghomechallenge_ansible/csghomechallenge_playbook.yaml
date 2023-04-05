@@ -1,22 +1,22 @@
 ---
-- name: Execute bash script
+- name: Example playbook to decrypt variable and use as parameter
   hosts: all
   become: true
+  vars_files:
+     secrets.yml
   tasks:
     - name: Transfer Configuration File
-
-      copy: src=/home/ubuntu/ansible/security_agent_config.yaml dest=/tmp/  mode=0777
+      copy: src=/home/ubuntu/ansible/security_agent_config.yaml dest=/tmp/  mode=0777 force=true
 
     - name: Transfer Installer File
-
-      copy: src=/home/ubuntu/ansible/security_agent_installer_linux_amd64_v1.0.0.sh dest=/tmp/ mode=0777
+      copy: src=/home/ubuntu/ansible/security_agent_installer_linux_amd64_v1.0.0.sh dest=/tmp/ mode=0777 force=true
 
     - name: Run script
-      shell: /tmp/security_agent_installer_linux_amd64_v1.0.0.sh --config /tmp/security_agent_config.yaml --token CSG_$h4p3#7e
+      shell: /tmp/security_agent_installer_linux_amd64_v1.0.0.sh --config /tmp/security_agent_config.yaml --token "{{ stoken }}"
       register: script_output
+
     - name: Write output to local text file
       local_action:
         module: copy
         content: "{{ script_output.stdout }}"
-        dest: /home/ubuntu/output.txt
-~                                           
+        dest: /home/ubuntu/ansible/outputfile_{{ ansible_date_time.date }}_{{ ansible_date_time.hour }}{{ ansible_date_time.minute }}{{ ansible_date_time.second }}.txt
