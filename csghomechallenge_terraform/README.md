@@ -60,7 +60,7 @@ ansiblecontrolnode and remote application hosts are running in private subnet an
 Create reusable Terraform code for future projects.
 --------------------------------------------------
 
-this script can reusable by changing/adding values to the .tfvars file.
+created TF module for this homechllange assignment and can be reusable by changing/adding values to the .tfvars file.
 
 
 
