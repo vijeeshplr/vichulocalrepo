@@ -1,5 +1,5 @@
 ---
-- name: Example playbook to decrypt variable and use as parameter
+- name: Copy security agent file to remote server and execute it.
   hosts: all
   become: true
   vars_files:
